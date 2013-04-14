@@ -1,13 +1,13 @@
 #
-# Cookbook Name:: pakue_base
+# Cookbook Name:: demo_base
 # Recipe:: default
 #
-# Copyright 2013, YOUR_COMPANY_NAME
+# Copyright 2013, Yuya "pakue" Yoshida
 #
 # All rights reserved - Do Not Redistribute
 #
-execute "apt-get update" do
-  command "apt-get update"
+execute "apt-get update & upgrade" do
+  command "apt-get update && apt-get upgrade -y"
   ignore_failure true
 end
 
