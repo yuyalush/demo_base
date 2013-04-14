@@ -1,9 +1,8 @@
 pakue_base Cookbook
 ===================
-TODO: Enter the cookbook description here.
 
-e.g.
-This cookbook makes your favorite breakfast sandwhich.
+デモで見せてきたセットアップシェルのChef版です。
+ドキュメントを含め整備中
 
 Requirements
 ------------
