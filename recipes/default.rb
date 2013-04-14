@@ -20,7 +20,7 @@ end
 script "install_ruby" do
   interpreter "bash"
   user "root"
-  cwd "/tmp"
+  cwd "/root"
   code <<-EOH
   wget ftp://ftp.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p0.tar.gz
   tar -zxf ruby-2.0.0-p0.tar.gz
@@ -48,20 +48,20 @@ end
 script "create_testapp_1" do
   interpreter "bash"
   user "root"
-  cwd "/tmp"
+  cwd "/root"
   code <<-EOH
   rails new testapp --skip-bundle
   EOH
 end
 
-cookbook_file "/tmp/testapp/Gemfile" do
+cookbook_file "/root/testapp/Gemfile" do
   source "Gemfile"
 end
 
 script "create_testapp_2" do
   interpreter "bash"
   user "root"
-  cwd "/tmp"
+  cwd "/root"
   code <<-EOH
   cd testapp
   bundle install
