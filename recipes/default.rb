@@ -11,7 +11,7 @@ execute "apt-get update & upgrade" do
   ignore_failure true
 end
 
-%w[zsh git build-essential zlib1g-dev libssl-dev libreadline-dev libxml2-dev libxslt-dev libsqlite3-dev g++ sqlite3].each do |pkg|
+%w[git build-essential zlib1g-dev libssl-dev libreadline-dev libxml2-dev libxslt-dev libsqlite3-dev g++ sqlite3].each do |pkg|
   package pkg do
     action :install
   end
